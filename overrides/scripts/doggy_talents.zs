@@ -1,7 +1,3 @@
-import crafttweaker.item.IItemStack;
-import crafttweaker.item.IIngredient;
-import crafttweaker.oredict.IOreDictEntry;
-
 recipes.removeByRecipeName("doggytalents:throw_stick");
 recipes.removeByRecipeName("doggytalents:throw_bone");
 
