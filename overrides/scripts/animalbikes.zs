@@ -1,16 +1,12 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemCondition;
-
-recipes.removeByRecipeName("thermalfoundation:saddle");
-
-static saddle = <minecraft:saddle>;
-static flyingSaddle = <contenttweaker:flying_saddle>;
+import crafttweaker.item.IItemTransformer;
 
 // TODO
-recipes.addShaped("flying_saddle", flyingSaddle, [
+recipes.addShaped("flying_saddle", <contenttweaker:flying_saddle>, [
 	[null, <minecraft:elytra>.onlyDamageAtMost(10), null],
-	[<extrautils2:chickenring:1>, saddle, <contenttweaker:research_flight_3>.reuse()],
+	[<extrautils2:chickenring:1>, <minecraft:saddle>, <contenttweaker:research_flight_3>.reuse()],
 	[null, null, null]
 ]);
 
@@ -19,7 +15,7 @@ function addSimpleRide(ride as IItemStack, mob as IIngredient, essence as IIngre
 }
 
 function addSimpleRideExtra(ride as IItemStack, mob as IIngredient, essence as IIngredient, food as IIngredient, extra as IIngredient) {
-	recipes.addShaped("animalbikes_" + ride.name, ride, [
+	recipes.addShaped("animalbikes_" ~ ride.name, ride, [
 		[essence, extra, essence],
 		[food, <minecraft:saddle>, food],
 		[essence, mob, essence]
@@ -31,9 +27,9 @@ function addFlyingRide(ride as IItemStack, mob as IIngredient, essence as IIngre
 }
 
 function addFlyingRideExtra(ride as IItemStack, mob as IIngredient, essence as IIngredient, food as IIngredient, extra as IIngredient) {
-	recipes.addShaped("animalbikes_" + ride.name, ride, [
+	recipes.addShaped("animalbikes_" ~ ride.name, ride, [
 		[essence, extra, essence],
-		[food, flyingSaddle, food],
+		[food, <contenttweaker:flying_saddle>, food],
 		[essence, mob, essence]
 	]);
 }
@@ -82,7 +78,7 @@ addSimpleRide(<animalbikes:enderbike>, mobIngredient("minecraft:enderman"), <mys
 recipes.removeByRecipeName("animalbikes:notchbike_0"); // vomits apples, tries to eat you. apple tree sapling
 recipes.addShaped("animalbikes_notchbike", <animalbikes:notchbike>, [
 	[<minecraft:golden_apple>, <rustic:sapling_apple>, <minecraft:golden_apple>],
-	[<opencomputers:keyboard>, saddle, <minecraft:grass>],
+	[<opencomputers:keyboard>, <minecraft:saddle>, <minecraft:grass>],
 	[<minecraft:golden_apple>, <ore:skullZombie>, <minecraft:golden_apple>]
 ]);
 
@@ -119,7 +115,7 @@ recipes.removeByRecipeName("animalbikes:ponybike_0"); // horn, wings, rainbows?
 val ponyFood = <minecraft:golden_apple> | <minecraft:golden_carrot>;
 recipes.addShaped("animalbikes_ponybike", <animalbikes:ponybike>, [
 	[<mysticalagriculture:diamond_essence>, <botania:cosmetic:18>, <mysticalagriculture:diamond_essence>],
-	[ponyFood, flyingSaddle, ponyFood],
+	[ponyFood, <contenttweaker:flying_saddle>, ponyFood],
 	[<simplyjetpacks:metaitem:3>, mobIngredient("minecraft:horse"), <simplyjetpacks:metaitem:3>]
 ]);
 
@@ -146,7 +142,7 @@ recipes.removeByRecipeName("animalbikes:flowerbike_0"); // flies slow. botania?
 val daffomill = <botania:floatingspecialflower>.withTag({type: "daffomill"});
 recipes.addShaped("animalbikes_flowerbike", <animalbikes:flowerbike>, [
 	[null, <botania:specialflower>.withTag({type: "agricarnation"}), null],
-	[null, flyingSaddle, null],
+	[null, <contenttweaker:flying_saddle>, null],
 	[daffomill, daffomill, daffomill]
 ]);
 
