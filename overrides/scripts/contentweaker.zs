@@ -43,8 +43,15 @@ function createResearchBook(bookName as string) as ItemFood {
 	researchBook.alwaysEdible = true;
 	researchBook.creativeTab = genprogTab;
 	researchBook.rarity = "EPIC";
-	researchBook.textureLocation = ResourceLocation.create("contenttweaker:items/research_book");
+	researchBook.textureLocation = ResourceLocation.create("contenttweaker:items/" ~ bookName);
 	researchBook.itemUseAction = "EAT";
+	return researchBook;
+}
+
+function createIncompleteResearchBook(bookName as string) as Item {
+	val researchBook = VanillaFactory.createItem(bookName ~ "_incomplete");
+	researchBook.creativeTab = genprogTab;
+	researchBook.textureLocation = ResourceLocation.create("contenttweaker:items/" ~ bookName ~ "_incomplete");
 	return researchBook;
 }
 
@@ -52,27 +59,36 @@ function createResearchBook(bookName as string) as ItemFood {
 // Flight research
 // ---------------
 
-var itemResearch1 = createResearchBook("research_flight_1");
-itemResearch1.rarity = "UNCOMMON";
-itemResearch1.onItemUseFinish = function(stack, world, entity) {
+val researchFlight1 = createResearchBook("research_flight_1");
+researchFlight1.rarity = "UNCOMMON";
+researchFlight1.onItemUseFinish = function(stack, world, entity) {
 	return unlockProxy(stack, world, entity, ["research_flight_1"]);
 };
-itemResearch1.register();
+researchFlight1.register();
 
-var itemResearch2 = createResearchBook("research_flight_2");
-itemResearch2.rarity = "RARE";
-itemResearch2.onItemUseFinish = function(stack, world, entity) {
+val researchFlight1Incomplete = createIncompleteResearchBook("research_flight_1");
+researchFlight1Incomplete.register();
+
+val researchFlight2 = createResearchBook("research_flight_2");
+researchFlight2.rarity = "RARE";
+researchFlight2.onItemUseFinish = function(stack, world, entity) {
 	return unlockProxy(stack, world, entity, ["research_flight_1", "research_flight_2"]);
 };
-itemResearch2.register();
+researchFlight2.register();
 
-var itemResearch3 = createResearchBook("research_flight_3");
-itemResearch3.onItemUseFinish = function(stack, world, entity) {
+val researchFlight2Incomplete = createIncompleteResearchBook("research_flight_2");
+researchFlight2Incomplete.register();
+
+val researchFlight3 = createResearchBook("research_flight_3");
+researchFlight3.onItemUseFinish = function(stack, world, entity) {
 	return unlockProxy(stack, world, entity, ["research_flight_1", "research_flight_2", "research_flight_3"]);
 };
-itemResearch3.register();
+researchFlight3.register();
 
-var flyingSaddle = VanillaFactory.createItem("flying_saddle");
+val researchFlight3Incomplete = createIncompleteResearchBook("research_flight_3");
+researchFlight3Incomplete.register();
+
+val flyingSaddle = VanillaFactory.createItem("flying_saddle");
 flyingSaddle.creativeTab = genprogTab;
 flyingSaddle.textureLocation = ResourceLocation.create("contenttweaker:items/flying_saddle");
 flyingSaddle.maxStackSize = 8;
