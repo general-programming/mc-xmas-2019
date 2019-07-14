@@ -44,7 +44,6 @@ recipes.addShapeless("research_flight_1", <contenttweaker:research_flight_1>, [
 		<deepmoblearning:data_model_blaze>.withTag({tier: 2})
 		| <deepmoblearning:data_model_blaze>.withTag({tier: 3})
 		| <deepmoblearning:data_model_blaze>.withTag({tier: 4})
-		| <deepmoblearning:data_model_blaze>.withTag({tier: 5})
 	).reuse(),
 	<minecraft:elytra>.onlyDamageAtMost(10),
 	mobIngredient("minecraft:ghast"),
@@ -72,17 +71,14 @@ recipes.addShapeless("research_flight_2", <contenttweaker:research_flight_2>, [
 	(
 		<deepmoblearning:data_model_blaze>.withTag({tier: 3})
 		| <deepmoblearning:data_model_blaze>.withTag({tier: 4})
-		| <deepmoblearning:data_model_blaze>.withTag({tier: 5})
 	).reuse(),
 	(
 		<deepmoblearning:data_model_ghast>.withTag({tier: 3})
 		| <deepmoblearning:data_model_ghast>.withTag({tier: 4})
-		| <deepmoblearning:data_model_ghast>.withTag({tier: 5})
 	).reuse(),
 	(
 		<deepmoblearning:data_model_wither>.withTag({tier: 3})
 		| <deepmoblearning:data_model_wither>.withTag({tier: 4})
-		| <deepmoblearning:data_model_wither>.withTag({tier: 5})
 	).reuse(),
 ]);
 
@@ -155,14 +151,8 @@ stage = "research_flight_3";
 
 recipes.addShapeless("research_flight_3", <contenttweaker:research_flight_3>, [
 	<minecraft:book>,
-	(
-		<deepmoblearning:data_model_wither>.withTag({tier: 4})
-		| <deepmoblearning:data_model_wither>.withTag({tier: 5})
-	).reuse(),
-	(
-		<deepmoblearning:data_model_dragon>.withTag({tier: 4})
-		| <deepmoblearning:data_model_dragon>.withTag({tier: 5})
-	).reuse(),
+	<deepmoblearning:data_model_wither>.withTag({tier: 4}).reuse(),
+	<deepmoblearning:data_model_dragon>.withTag({tier: 4}).reuse(),
 ]);
 
 lockItems(stage, [
