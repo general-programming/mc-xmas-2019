@@ -1,1 +1,3 @@
 overrides/config/Chikachi/
+*
+!all_changes_made_here.sh
