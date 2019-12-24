@@ -120,8 +120,7 @@ recipes.addShaped("animalbikes_ponybike", <animalbikes:ponybike>, [
 ]);
 
 recipes.removeByRecipeName("animalbikes:dragonbike_0"); // breathes fire (flint and steel). fire resistance
-val dragonScale = <mysticalagradditions:stuff:3> | <quark:enderdragon_scale>;
-addFlyingRide(<animalbikes:dragonbike>, <minecraft:dragon_egg>, dragonScale, null);
+addFlyingRide(<animalbikes:dragonbike>, <minecraft:dragon_egg>,  <quark:enderdragon_scale>, null);
 
 recipes.removeByRecipeName("animalbikes:reindeerbike_0"); // snow particles.
 addFlyingRideExtra(<animalbikes:reindeerbike>, mobIngredient("minecraft:horse"), <mysticalagriculture:ice_essence>, <minecraft:sapling:1>, <minecraft:wool:14>);

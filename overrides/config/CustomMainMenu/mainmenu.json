@@ -2,22 +2,22 @@
     "images": {
         "title": {
             "image": "mainmenu:textures/logo.png",
-            "posX": 4,
-            "posY": -95,
-            "width": 406,
-            "height": 65,
-            "alignment": "left_center"
+            "posX": -125,
+            "posY": 5,
+            "width": 250,
+            "height": 67,
+            "alignment": "top_center"
         }
     },
 
     "buttons": {
         "join": {
             "text": "Play!",
-            "posX": 4,
+            "posX": -100,
             "posY": -10,
             "width": 200,
             "height": 20,
-            "alignment": "left_center",
+            "alignment": "center",
             "action": {
                 "type": "connectToServer",
                 "ip": "mc.genprog.gq"
@@ -25,11 +25,11 @@
         },
         "singleplayer": {
             "text": "",
-            "posX": 4,
+            "posX": -100,
             "posY": 12,
             "width": 20,
             "height": 20,
-            "alignment": "left_center",
+            "alignment": "center",
             "texture": "mainmenu:textures/button-singleplayer.png",
             "action": {
                 "type": "openGui",
@@ -38,11 +38,11 @@
         },
         "multiplayer": {
             "text": "",
-            "posX": 26,
+            "posX": -78,
             "posY": 12,
             "width": 20,
             "height": 20,
-            "alignment": "left_center",
+            "alignment": "center",
             "texture": "mainmenu:textures/button-multiplayer.png",
             "action": {
                 "type": "openGui",
@@ -51,11 +51,11 @@
         },
         "mods": {
             "text": "",
-            "posX": 48,
+            "posX": -56,
             "posY": 12,
             "width": 20,
             "height": 20,
-            "alignment": "left_center",
+            "alignment": "center",
             "texture": "mainmenu:textures/button-mods.png",
             "action": {
                 "type": "openGui",
@@ -64,38 +64,38 @@
         },
         "options": {
             "text": "",
-            "posX": 70,
+            "posX": -34,
             "posY": 12,
             "width": 20,
             "height": 20,
-            "alignment": "left_center",
+            "alignment": "center",
             "texture": "mainmenu:textures/button-settings.png",
             "action": {
                 "type": "openGui",
                 "gui": "options"
             }
         },
-        "quit": {
-            "text": "menu.quit",
-            "posX": 114,
-            "posY": 12,
-            "width": 90,
-            "height": 20,
-            "alignment": "left_center",
-            "action": {
-                "type": "quit"
-            }
-        },
         "language": {
             "text": "",
-            "posX": 92,
+            "posX": -12,
             "posY": 12,
             "width": 20,
             "height": 20,
-            "alignment": "left_center",
+            "alignment": "center",
             "action": {
                 "type": "openGui",
                 "gui": "languages"
+            }
+        },
+		"quit": {
+            "text": "menu.quit",
+            "posX": 10,
+            "posY": 12,
+            "width": 90,
+            "height": 20,
+            "alignment": "center",
+            "action": {
+                "type": "quit"
             }
         }
     },
@@ -114,7 +114,7 @@
             }
         },
         "credits": {
-            "text": "Background image by Nattu Adnan on Unsplash",
+            "text": "Background image by Ian Schneider on Unsplash",
             "posX": -2,
             "posY": -20,
             "color": -1,
@@ -129,18 +129,10 @@
             "alignment": "bottom_left"
         }
     },
-
     "other": {
         "background": {
             "image": "mainmenu:textures/background.jpg",
-            "mode": "fill"
-        },
-        "splash-text": {
-            "posX": 390,
-            "posY": -20,
-            "color": -256,
-            "alignment": "left_center",
-            "texts": "splash text!"
+            "mode": "stretch"
         }
     }
 }
