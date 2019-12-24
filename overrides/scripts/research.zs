@@ -67,7 +67,7 @@ lockParts(stage, [
 stage = "research_flight_2";
 
 recipes.addShapeless("research_flight_2", <contenttweaker:research_flight_2>, [
-	<minecraft:book>,
+	<contenttweaker:research_flight_1>.reuse(),
 	(
 		<deepmoblearning:data_model_blaze>.withTag({tier: 3})
 		| <deepmoblearning:data_model_blaze>.withTag({tier: 4})
@@ -150,7 +150,7 @@ lockRecipes(stage, [
 stage = "research_flight_3";
 
 recipes.addShapeless("research_flight_3", <contenttweaker:research_flight_3>, [
-	<minecraft:book>,
+	<contenttweaker:research_flight_2>.reuse(),
 	<deepmoblearning:data_model_wither>.withTag({tier: 4}).reuse(),
 	<deepmoblearning:data_model_dragon>.withTag({tier: 4}).reuse(),
 ]);
