@@ -2,10 +2,10 @@
     "images": {
         "title": {
             "image": "mainmenu:textures/logo.png",
-            "posX": -125,
+            "posX": -175,
             "posY": 5,
-            "width": 250,
-            "height": 67,
+            "width": 350,
+            "height": 94,
             "alignment": "top_center"
         }
     },
@@ -14,7 +14,7 @@
         "join": {
             "text": "Play!",
             "posX": -100,
-            "posY": -10,
+            "posY": 0,
             "width": 200,
             "height": 20,
             "alignment": "center",
@@ -26,7 +26,7 @@
         "singleplayer": {
             "text": "",
             "posX": -100,
-            "posY": 12,
+            "posY": 22,
             "width": 20,
             "height": 20,
             "alignment": "center",
@@ -39,7 +39,7 @@
         "multiplayer": {
             "text": "",
             "posX": -78,
-            "posY": 12,
+            "posY": 22,
             "width": 20,
             "height": 20,
             "alignment": "center",
@@ -52,7 +52,7 @@
         "mods": {
             "text": "",
             "posX": -56,
-            "posY": 12,
+            "posY": 22,
             "width": 20,
             "height": 20,
             "alignment": "center",
@@ -65,7 +65,7 @@
         "options": {
             "text": "",
             "posX": -34,
-            "posY": 12,
+            "posY": 22,
             "width": 20,
             "height": 20,
             "alignment": "center",
@@ -78,7 +78,7 @@
         "language": {
             "text": "",
             "posX": -12,
-            "posY": 12,
+            "posY": 22,
             "width": 20,
             "height": 20,
             "alignment": "center",
@@ -90,7 +90,7 @@
 		"quit": {
             "text": "menu.quit",
             "posX": 10,
-            "posY": 12,
+            "posY": 22,
             "width": 90,
             "height": 20,
             "alignment": "center",
