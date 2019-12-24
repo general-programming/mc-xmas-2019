@@ -120,7 +120,7 @@ recipes.addShaped("animalbikes_ponybike", <animalbikes:ponybike>, [
 ]);
 
 recipes.removeByRecipeName("animalbikes:dragonbike_0"); // breathes fire (flint and steel). fire resistance
-addFlyingRide(<animalbikes:dragonbike>, <minecraft:dragon_egg>,  <quark:enderdragon_scale>, null);
+addFlyingRide(<animalbikes:dragonbike>, <minecraft:dragon_egg>, <quark:enderdragon_scale>, null);
 
 recipes.removeByRecipeName("animalbikes:reindeerbike_0"); // snow particles.
 addFlyingRideExtra(<animalbikes:reindeerbike>, mobIngredient("minecraft:horse"), <mysticalagriculture:ice_essence>, <minecraft:sapling:1>, <minecraft:wool:14>);
@@ -135,7 +135,7 @@ recipes.removeByRecipeName("animalbikes:batbike_0"); // night vision. night visi
 addFlyingRideExtra(<animalbikes:batbike>, mobIngredient("minecraft:bat"), <mysticalagriculture:stone_essence>, <actuallyadditions:item_misc:15>, <minecraft:golden_carrot>);
 
 recipes.removeByRecipeName("animalbikes:chinesedragonbike_0"); // fireworks.
-addFlyingRide(<animalbikes:chinesedragonbike>, <minecraft:dragon_egg>, dragonScale, <minecraft:fireworks>);
+addFlyingRide(<animalbikes:chinesedragonbike>, <minecraft:dragon_egg>, <quark:enderdragon_scale>, <minecraft:fireworks>);
 
 recipes.removeByRecipeName("animalbikes:flowerbike_0"); // flies slow. botania?
 val daffomill = <botania:floatingspecialflower>.withTag({type: "daffomill"});
