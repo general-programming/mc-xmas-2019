@@ -2,9 +2,9 @@
 recipes.removeByRecipeName("rustic:crop_stake");
 
 recipes.addShaped("rustic_crop_stake", <rustic:crop_stake>, [
-	[null, <ore:plankWood>, null],
-	[null, <ore:plankWood>, null],
-	[null, <ore:stickWood>, null]
+	[<ore:stickWood>],
+	[<ore:plankWood>],
+	[<ore:plankWood>]
 ]);
 
 // Remove unnecessary recipe that crafts 3 string into 2 string and conflicts with Rustic ropes
