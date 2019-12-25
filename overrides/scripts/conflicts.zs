@@ -7,12 +7,13 @@ recipes.addShaped("rustic_crop_stake", <rustic:crop_stake>, [
 	[null, <ore:stickWood>, null]
 ]);
 
-// Fix conflict between rustic rope and some weird recipe
-recipes.removeByRecipeName("rustic:rope");
+// Remove unnecessary recipe that crafts 3 string into 2 string and conflicts with Rustic ropes
+recipes.removeByRecipeName("harvestcraft:string_cropflax");
 
-recipes.addShaped("rustic_rope", <rustic:rope>, [
-	[null, <ore:string>, null],
-	[null, <ore:string>, null],
-	[null, <ore:stickWood>, null]
+// Fix conflict between Tinker's Patterns and Tine Progressions Wooden Shears
+recipes.removeByRecipeName("tp:wooden_shears");
+
+recipes.addShaped("tp_wooden_shears", <tp:wooden_shears>, [
+	[<ore:plankWood>, null],
+	[<ore:stickWood>, <ore:plankWood>],
 ]);
-
